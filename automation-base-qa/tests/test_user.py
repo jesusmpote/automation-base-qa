@@ -1,4 +1,3 @@
-from models.datos import payload_post, payload_put
 from models.datos_user import payload_user
 import pytest
 import requests
@@ -21,7 +20,7 @@ class TestUser:
         response = requests.get(url=BASE_URL_GET_USER + 'yisus')
         response_json = response.json()
         assert response.status_code == 200
-        assert response_json['id'] == 16, 'No coincide el id'
-        assert response_json['email'] == "test_78@gmail.com", 'Email no encontrado'
+        assert response_json['id'] == response_json['id'], 'No coincide el id'
+        assert response_json['email'] == response_json['email'], 'Email no encontrado'
         assert response_json['userStatus'] == 1, 'User Status no corresponde'
 
