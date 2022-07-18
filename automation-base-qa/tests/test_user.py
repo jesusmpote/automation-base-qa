@@ -15,8 +15,4 @@ class TestUser:
         assert response.status_code == 200, "Status Code is not 200"
         assert response_json['message'] is not None, "Message is empty"
         assert response_json['code'] == 200
-        print(response.content)
-        print(response.headers)
-        print(response.encoding)
-        print(response.content)
-        # yield response_json, response
+
