@@ -1,5 +1,5 @@
 import requests
-from config import BASE_URL, HEADERS, BASE_URL_GET
+from config import BASE_URL_GET
 
 
 class TestPet:
